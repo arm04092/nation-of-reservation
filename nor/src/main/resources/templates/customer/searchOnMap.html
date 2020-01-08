@@ -117,21 +117,21 @@
 		for(let i = 0; i < franchiseeList.length; i++) {
 			// 주소-좌표 변환 객체를 생성합니다
 			let geocoder = new kakao.maps.services.Geocoder();
-			
+			let address = franchiseeList[i].address
 			// 주소로 좌표를 검색합니다
-			geocoder.addressSearch("서울 금천구 가산디지털2로 115", function(result, status) {
+			geocoder.addressSearch("인천 남동구 경신상로 28", function(result, status) {
 
 			    // 정상적으로 검색이 완료됐으면 
 			     if (status === kakao.maps.services.Status.OK) {
 			        let coords = new kakao.maps.LatLng(result[0].y, result[0].x);
 					
-			        //console.log("coords", coords);
+			        console.log("coords", coords);
 			        positions.push( {"content":"<div>"+franchiseeList[i].franchiseeName+"</div>", "latlng":coords} );
 			    } 
 			});
 		}
 		
-		//console.log("positions", positions);
+		console.log("positions", positions);
 		
 		// 마커 생성
 		for (let i = 0; i < positions.length; i ++) {
