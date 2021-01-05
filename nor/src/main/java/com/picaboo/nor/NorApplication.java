@@ -20,7 +20,7 @@ public class NorApplication {
         javaMailSender.setHost("smtp.gmail.com");
         javaMailSender.setPort(587);
         javaMailSender.setUsername("kuooeee@gmail.com");
-        javaMailSender.setPassword("asdasd1589");
+        javaMailSender.setPassword("*********");
         
         Properties properties = new Properties();
         properties.setProperty("mail.smtp.auth", "true");
